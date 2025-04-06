@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Mohammad Tahsiri - Interactive CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .accordion-button {
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+        .download-pdf {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amir Mohammad Tahsiri - Interactive CV</h1>
+    <p style="text-align: center;">
+        <a href="mailto:mohammad.tahsiri@hotmail.com">mohammad.tahsiri@hotmail.com</a> | 
+        <a href="https://www.linkedin.com/in/mohammad-tahsiri-62a628103">LinkedIn</a> | 
+        <a href="https://github.com/mamadgit">GitHub</a>
+    </p>
+    <div class="download-pdf">
+        <a href="path-to-your-pdf.pdf" class="btn btn-primary" download>Download PDF Version</a>
+    </div>
+    <div class="accordion" id="cvAccordion">
+        <!-- Research Experience -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#research">
+                    Research Experience
+                </button>
+            </h2>
+            <div id="research" class="accordion-collapse collapse show" data-bs-parent="#cvAccordion">
+                <div class="accordion-body">
+                    <p><strong>Using eye-tracking technology for clinical studies and UX research</strong><br>
+                    Shahid Beheshti Institute for Cognitive & Brain Sciences, Sep 2016 – Dec 2018</p>
+                    <ul>
+                        <li>Conducted various experiments from researching autism to user experience using eye-tracking.</li>
+                        <li>Designed the experiments on the eye-tracking software (SMI & Begaze 3.7).</li>
+                        <li>Implemented innovative techniques for more precise results: gaze calibration mid-experiment in addition to the standard calibration pre-experiment.</li>
+                        <li>Researched the attention levels of both normal and autistic children on two sets of designed images.</li>
+                        <li>Performed statistical analysis (t-test and ANOVA) on the children’s rapid eye movements and gaze patterns obtained from four different age groups to derive meaningful results.</li>
+                        <li>Conducted user behaviour analysis on Djikala websites (akin to Amazon) using eye-tracking to study gaze patterns (fixations and saccades) of 55 participants for enhancing user navigation.</li>
+                        <li>Utilised methodologies, such as user interviews, surveys, and usability testing to cross-reference with gathered data to reach meaningful results.</li>
+                    </ul>
+                    <!-- Add other research experiences here -->
+                </div>
+            </div>
+        </div>
+        <!-- Publications -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#publications">
+                    Publications
+                </button>
+            </h2>
+            <div id="publications" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+                <div class="accordion-body">
+                    <p>Tahsiri, A.M. (Forthcoming 2025). BibBreeze: A LaTeX Package for Automating Bibliography Data Reconstruction. TUGBoat 46 (1).</p>
+                    <p>Tahsiri, A.M. (2023). Development of a Graph-Based Model for Trust Management in Collaborative Work. SN COMPUT. SCI. 4 Article 635. <a href="https://doi:10.1007/s42979-023-02125-0">https://doi:10.1007/s42979-023-02125-0</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Education -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#education">
+                    Education
+                </button>
+            </h2>
+            <div id="education" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+                <div class="accordion-body">
+                    <p><strong>MSc Cognitive Science</strong><br>University of Kurdistan, Iran, Jan 2018 – Jul 2020</p>
+                    <p><strong>BSc Computer Science</strong><br>Bojnourd University, Iran, Sep 2011 – Feb 2017</p>
+                    <p><strong>Diploma in Mathematics & Physics</strong><br>Hessabi High School, Tehran, Iran, Sep 2010 – Jun 2011</p>
+                </div>
+            </div>
+        </div>
+        <!-- Key Courses Taken -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courses">
+                    Key Courses Taken
+                </button>
+            </h2>
+            <div id="courses" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+                <div class="accordion-body">
+                    <p><strong>Computer Science:</strong> Automata Theory, Programming for Data Science, Statistical Analysis with R, Internet of Things (IoT).</p>
+                    <p><strong>Cognitive Science:</strong> Computational Cognitive Science, Cognitive Psychology (higher-cognitive functions), Cognitive Linguistics, Philosophy of Mind, Research Methods in Cognitive Science.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Technical Skills -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skills">
+                    Technical Skills
+                </button>
+            </h2>
+            <div id="skills" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+                <div class="accordion-body">
+                    <p><strong>Programming:</strong> Python (machine learning), WEX (package development), R (data analysis), Linux</p>
+                    <p><strong>Software:</strong> Ubuntu, NusMV (model checker), SMI & Begaze 3.7 (eye-tracking software), Microsoft Office</p>
+                    <p><strong>Tools:</strong> Git, GitHub, VSCode, Overleaf</p>
+                </div>
+            </div>
+        </div>
+        <!-- Achievements & Certifications -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#achievements">
+                    Achievements & Certifications
+                </button>
+            </h2>
+            <div id="achievements" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+                <div class="accordion-body">
+                    <p>Attendance in Combining EEG & Eye-tracking: Theory and practice workshop, Institute of Psychology University of Berlin and Shahid Beheshti Institute of Cognitive & Brain Sciences, Nov 2016</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
