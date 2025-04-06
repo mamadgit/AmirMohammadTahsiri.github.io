@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amir Mohammad Tahsiri - Interactive CV</title>
@@ -51,6 +51,15 @@
         }
         .accordion-button:not(.collapsed) {
             background-color: #d1e7dd;
+        }
+        .nested-accordion-button {
+            font-weight: normal;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            padding-left: 40px; /* Indent nested accordion button */
+        }
+        .nested-accordion-button:not(.collapsed) {
+            background-color: #e9ecef;
         }
         .subsection-title {
             font-weight: bold;
@@ -115,12 +124,26 @@
                 <div class="accordion-body">
                     <p class="date-text">Independent Research, Jul 2024 – Dec 2024</p>
                     <div class="first-bullet">Developed the first-ever LaTeX package (written in LaTeX3) whose unique algorithms automate the reconstruction of missing and/or unorganized bibliography data. Its features are (Github link).</div>
-                    <ul>
-                        <li>Enhanced parsing by taking advantage of unique token identifiers and regex commands to extract bundled entry fields, significantly reducing iteration time.</li>
-                        <li>Using innovative logic, it distinguishes entry subfields for proceedings papers that are presented, published in journals, or edited in books whom all share the same BibTeX identifier (inproceedings).</li>
-                        <li>Adheres to strict APA 7th edition referencing guidelines with more styles to come.</li>
-                        <li>Published this work with focus on the algorithms’ creativity and efficiency in the journal of TUGBoat.</li>
-                    </ul>
+                    <!-- Nested Accordion for White Bullet Points -->
+                    <div class="accordion" id="bibbreezeDetails">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button nested-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bibbreezeDetailsCollapse">
+                                    More Details
+                                </button>
+                            </h2>
+                            <div id="bibbreezeDetailsCollapse" class="accordion-collapse collapse" data-bs-parent="#bibbreezeDetails">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Enhanced parsing by taking advantage of unique token identifiers and regex commands to extract bundled entry fields, significantly reducing iteration time.</li>
+                                        <li>Using innovative logic, it distinguishes entry subfields for proceedings papers that are presented, published in journals, or edited in books whom all share the same BibTeX identifier (inproceedings).</li>
+                                        <li>Adheres to strict APA 7th edition referencing guidelines with more styles to come.</li>
+                                        <li>Published this work with focus on the algorithms’ creativity and efficiency in the journal of TUGBoat.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,12 +158,26 @@
                 <div class="accordion-body">
                     <p class="date-text">UWE Bristol, Jan 2023 – Dec 2023</p>
                     <div class="first-bullet">Analysed and compared existing semantic structures on formally modelling agents’ knowledge and reasoning process to conclude a new perspective regarding the design of said structures.</div>
-                    <ul>
-                        <li>Most research in this area agree to reach the computationally grounded threshold of semantic structures, the agents’ local states must be considered alongside the system’s global states. However, disagreement arises if a structure adequately captures the local states to reach this threshold.</li>
-                        <li>This research review presents various research with different designs for their agents’ local states and by comparison, concludes that computationally grounding is not threshold-based but gradational.</li>
-                        <li>This comparison has been shown through hypothetical scenarios (i.e., swarm of self-driving cars).</li>
-                        <li>The theoretical and practical comparison portray a new perspective towards designing semantic structures. That is: The adequate level of computational grounding for the agents’ local states must consider their environment; certain environments may require more abstract designs.</li>
-                    </ul>
+                    <!-- Nested Accordion for White Bullet Points -->
+                    <div class="accordion" id="uweSemanticsDetails">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button nested-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uweSemanticsDetailsCollapse">
+                                    More Details
+                                </button>
+                            </h2>
+                            <div id="uweSemanticsDetailsCollapse" class="accordion-collapse collapse" data-bs-parent="#uweSemanticsDetails">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Most research in this area agree to reach the computationally grounded threshold of semantic structures, the agents’ local states must be considered alongside the system’s global states. However, disagreement arises if a structure adequately captures the local states to reach this threshold.</li>
+                                        <li>This research review presents various research with different designs for their agents’ local states and by comparison, concludes that computationally grounding is not threshold-based but gradational.</li>
+                                        <li>This comparison has been shown through hypothetical scenarios (i.e., swarm of self-driving cars).</li>
+                                        <li>The theoretical and practical comparison portray a new perspective towards designing semantic structures. That is: The adequate level of computational grounding for the agents’ local states must consider their environment; certain environments may require more abstract designs.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,11 +192,25 @@
                 <div class="accordion-body">
                     <p class="date-text">UWE Bristol, Mar 2022 – Sep 2022</p>
                     <div class="first-bullet">Physical health analysis of pregnant women (anonymous).</div>
-                    <ul>
-                        <li>The objective was to preform analysis on a given data set of pregnant women’s physical health and develop predictive models for gestational diabetes risk.</li>
-                        <li>The dataset was accumulated from their regular health check-ups. The parameters included glucose levels, blood pressure, skin thickness, insulin levels, BMI, diabetes pedigree function, and age.</li>
-                        <li>Utilised Python for data processing and analysis, with libraries such as NumPy, Pandas for cleaning and classifying the data and Matplotlib, and Seaborn for visualising and predicting outcomes.</li>
-                    </ul>
+                    <!-- Nested Accordion for White Bullet Points -->
+                    <div class="accordion" id="uweMachineLearningDetails">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button nested-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uweMachineLearningDetailsCollapse">
+                                    More Details
+                                </button>
+                            </h2>
+                            <div id="uweMachineLearningDetailsCollapse" class="accordion-collapse collapse" data-bs-parent="#uweMachineLearningDetails">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>The objective was to preform analysis on a given data set of pregnant women’s physical health and develop predictive models for gestational diabetes risk.</li>
+                                        <li>The dataset was accumulated from their regular health check-ups. The parameters included glucose levels, blood pressure, skin thickness, insulin levels, BMI, diabetes pedigree function, and age.</li>
+                                        <li>Utilised Python for data processing and analysis, with libraries such as NumPy, Pandas for cleaning and classifying the data and Matplotlib, and Seaborn for visualising and predicting outcomes.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,12 +225,26 @@
                 <div class="accordion-body">
                     <p class="date-text">University of Kurdistan (MSc thesis), Jan 2019 – Jul 2020</p>
                     <div class="first-bullet">Researched how trust is distributed and propagated amongst agents using agent-based modelling.</div>
-                    <ul>
-                        <li>Modelled how agents trust in their environment in NetLogo, incorporating influencing parameters.</li>
-                        <li>Applied Graph Theory, Game Theory concepts to identify agents’ most efficient collaboration form.</li>
-                        <li>Ran multiple simulations to identify the value of each influencing parameter for reaching the optimal collaboration form.</li>
-                        <li>Prepared a paper based on this research (2021), later published in SN COMPUT. SCI.</li>
-                    </ul>
+                    <!-- Nested Accordion for White Bullet Points -->
+                    <div class="accordion" id="kurdistanDetails">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button nested-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kurdistanDetailsCollapse">
+                                    More Details
+                                </button>
+                            </h2>
+                            <div id="kurdistanDetailsCollapse" class="accordion-collapse collapse" data-bs-parent="#kurdistanDetails">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Modelled how agents trust in their environment in NetLogo, incorporating influencing parameters.</li>
+                                        <li>Applied Graph Theory, Game Theory concepts to identify agents’ most efficient collaboration form.</li>
+                                        <li>Ran multiple simulations to identify the value of each influencing parameter for reaching the optimal collaboration form.</li>
+                                        <li>Prepared a paper based on this research (2021), later published in SN COMPUT. SCI.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,14 +259,28 @@
                 <div class="accordion-body">
                     <p class="date-text">Shahid Beheshti Institute for Cognitive & Brain Sciences, Sep 2016 – Dec 2018</p>
                     <div class="first-bullet">Conducted various experiments from researching autism to user experience using eye-tracking.</div>
-                    <ul>
-                        <li>Designed the experiments on the eye-tracking software (SMI & Begaze 3.7).</li>
-                        <li>Implemented innovative techniques for more precise results: gaze calibration mid-experiment in addition to the standard calibration pre-experiment.</li>
-                        <li>Researched the attention levels of both normal and autistic children on two sets of designed images.</li>
-                        <li>Performed statistical analysis (t-test and ANOVA) on the children’s rapid eye movements and gaze patterns obtained from four different age groups to derive meaningful results.</li>
-                        <li>Conducted user behaviour analysis on Djikala websites (akin to Amazon) using eye-tracking to study gaze patterns (fixations and saccades) of 55 participants for enhancing user navigation.</li>
-                        <li>Utilised methodologies, such as user interviews, surveys, and usability testing to cross-reference with gathered data to reach meaningful results.</li>
-                    </ul>
+                    <!-- Nested Accordion for White Bullet Points -->
+                    <div class="accordion" id="shahidBeheshtiDetails">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button nested-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shahidBeheshtiDetailsCollapse">
+                                    More Details
+                                </button>
+                            </h2>
+                            <div id="shahidBeheshtiDetailsCollapse" class="accordion-collapse collapse" data-bs-parent="#shahidBeheshtiDetails">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Designed the experiments on the eye-tracking software (SMI & Begaze 3.7).</li>
+                                        <li>Implemented innovative techniques for more precise results: gaze calibration mid-experiment in addition to the standard calibration pre-experiment.</li>
+                                        <li>Researched the attention levels of both normal and autistic children on two sets of designed images.</li>
+                                        <li>Performed statistical analysis (t-test and ANOVA) on the children’s rapid eye movements and gaze patterns obtained from four different age groups to derive meaningful results.</li>
+                                        <li>Conducted user behaviour analysis on Djikala websites (akin to Amazon) using eye-tracking to study gaze patterns (fixations and saccades) of 55 participants for enhancing user navigation.</li>
+                                        <li>Utilised methodologies, such as user interviews, surveys, and usability testing to cross-reference with gathered data to reach meaningful results.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,9 +298,23 @@
             <div id="publications" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
                 <div class="accordion-body">
                     <div class="first-bullet">Tahsiri, A.M. (Forthcoming 2025). BibBreeze: A LaTeX Package for Automating Bibliography Data Reconstruction. TUGBoat 46 (1).</div>
-                    <ul>
-                        <li>Tahsiri, A.M. (2023). Development of a Graph-Based Model for Trust Management in Collaborative Work. SN COMPUT. SCI. 4 Article 635. <a href="https://doi:10.1007/s42979-023-02125-0">https://doi:10.1007/s42979-023-02125-0</a></li>
-                    </ul>
+                    <!-- Nested Accordion for White Bullet Points -->
+                    <div class="accordion" id="publicationsDetails">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button nested-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#publicationsDetailsCollapse">
+                                    More Details
+                                </button>
+                            </h2>
+                            <div id="publicationsDetailsCollapse" class="accordion-collapse collapse" data-bs-parent="#publicationsDetails">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Tahsiri, A.M. (2023). Development of a Graph-Based Model for Trust Management in Collaborative Work. SN COMPUT. SCI. 4 Article 635. <a href="https://doi:10.1007/s42979-023-02125-0">https://doi:10.1007/s42979-023-02125-0</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -271,35 +364,4 @@
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skills">
                     Technical Skills
-                </button>
-            </h2>
-            <div id="skills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                <div class="accordion-body">
-                    <p><strong>Programming:</strong> Python (machine learning), WEX (package development), R (data analysis), Linux</p>
-                    <p><strong>Software:</strong> Ubuntu, NusMV (model checker), SMI & Begaze 3.7 (eye-tracking software), Microsoft Office</p>
-                    <p><strong>Tools:</strong> Git, GitHub, VSCode, Overleaf</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Achievements & Certifications -->
-    <div class="accordion" id="achievementsAccordion">
-        <div class="section-heading">Achievements & Certifications</div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#achievements">
-                    Achievements & Certifications
-                </button>
-            </h2>
-            <div id="achievements" class="accordion-collapse collapse" data-bs-parent="#achievementsAccordion">
-                <div class="accordion-body">
-                    <p>Attendance in Combining EEG & Eye-tracking: Theory and practice workshop, Institute of Psychology University of Berlin and Shahid Beheshti Institute of Cognitive & Brain Sciences, Nov 2016</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                </button
