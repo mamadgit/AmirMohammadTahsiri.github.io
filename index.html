@@ -66,9 +66,9 @@
             margin-bottom: 5px;
         }
         .date-text {
-            font-family: 'Times New Roman', serif; /* Updated font for date text */
+            font-family: 'Times New Roman', serif;
             font-style: italic;
-            font-size: 0.9em;
+            font-size: 1.1em;
             margin-top: 0;
             margin-bottom: 10px;
         }
@@ -91,6 +91,15 @@
         }
         ul li::before {
             content: "○";
+            color: #000;
+            margin-right: 8px;
+        }
+        /* Style for sub-bullets */
+        ul ul {
+            padding-left: 30px;
+        }
+        ul ul li::before {
+            content: "–"; /* Use a dash for sub-bullets */
             color: #000;
             margin-right: 8px;
         }
@@ -282,10 +291,18 @@
                                     <ul>
                                         <li>Designed the experiments on the eye-tracking software (SMI & Begaze 3.7).</li>
                                         <li>Implemented innovative techniques for more precise results: gaze calibration mid-experiment in addition to the standard calibration pre-experiment.</li>
-                                        <li>Researched the attention levels of both normal and autistic children on two sets of designed images.</li>
-                                        <li>Performed statistical analysis (t-test and ANOVA) on the children’s rapid eye movements and gaze patterns obtained from four different age groups to derive meaningful results.</li>
-                                        <li>Conducted user behaviour analysis on Djikala websites (akin to Amazon) using eye-tracking to study gaze patterns (fixations and saccades) of 55 participants for enhancing user navigation.</li>
-                                        <li>Utilised methodologies, such as user interviews, surveys, and usability testing to cross-reference with gathered data to reach meaningful results.</li>
+                                        <li>
+                                            Researched the attention levels of both normal and autistic children on two sets of designed images.
+                                            <ul>
+                                                <li>Performed statistical analysis (t-test and ANOVA) on the children’s rapid eye movements and gaze patterns obtained from four different age groups to derive meaningful results.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Conducted user behaviour analysis on Djikala websites (akin to Amazon) using eye-tracking to study gaze patterns (fixations and saccades) of 55 participants for enhancing user navigation.
+                                            <ul>
+                                                <li>Utilised methodologies, such as user interviews, surveys, and usability testing to cross-reference with gathered data to reach meaningful results.</li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
