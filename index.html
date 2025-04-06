@@ -14,6 +14,25 @@
         h1 {
             text-align: center;
             color: #2c3e50;
+            font-weight: bold;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-info a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .section-heading {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
         .accordion {
             max-width: 800px;
@@ -22,6 +41,28 @@
         .accordion-button {
             font-weight: bold;
             background-color: #e9ecef;
+            color: #2c3e50;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #d1e7dd;
+        }
+        .subsection-title::before {
+            content: "●";
+            color: #007bff; /* Blue bullet point */
+            margin-right: 8px;
+        }
+        .subsection-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        ul li::before {
+            content: "○"; /* White bullet point */
+            color: #000;
+            margin-right: 8px;
         }
         .download-pdf {
             text-align: center;
@@ -30,27 +71,108 @@
     </style>
 </head>
 <body>
-    <h1>Amir Mohammad Tahsiri - Interactive CV</h1>
-    <p style="text-align: center;">
+    <h1>Amir Mohammad Tahsiri</h1>
+    <div class="contact-info">
         <a href="mailto:mohammad.tahsiri@hotmail.com">mohammad.tahsiri@hotmail.com</a> | 
-        <a href="https://www.linkedin.com/in/mohammad-tahsiri-62a628103">LinkedIn</a> | 
-        <a href="https://github.com/mamadgit">GitHub</a>
-    </p>
-    <div class="download-pdf">
-        <a href="path-to-your-pdf.pdf" class="btn btn-primary" download>Download PDF Version</a>
+        <a href="https://www.linkedin.com/in/mohammad-tahsiri-62a628103">linkedin.com/in/mohammad-tahsiri-62a628103</a> | 
+        <a href="https://github.com/amirmohammadtahsiri">github.com/amirmohammadtahsiri</a>
     </div>
-    <div class="accordion" id="cvAccordion">
-        <!-- Research Experience -->
+    <div class="download-pdf">
+        <a href="/cv.pdf" class="btn btn-primary" download>Download PDF Version</a>
+    </div>
+
+    <!-- Research Experience -->
+    <div class="section-heading">Research Experience</div>
+    <div class="accordion" id="researchAccordion">
+        <!-- BibBreeze -->
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#research">
-                    Research Experience
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bibbreeze">
+                    <span class="subsection-title">BibBreeze: A LaTeX package for Automating Bibliography Data Reconstruction</span><br>
+                    Independent Research, Jul 2024 – Dec 2024
                 </button>
             </h2>
-            <div id="research" class="accordion-collapse collapse show" data-bs-parent="#cvAccordion">
+            <div id="bibbreeze" class="accordion-collapse collapse show" data-bs-parent="#researchAccordion">
                 <div class="accordion-body">
-                    <p><strong>Using eye-tracking technology for clinical studies and UX research</strong><br>
-                    Shahid Beheshti Institute for Cognitive & Brain Sciences, Sep 2016 – Dec 2018</p>
+                    <ul>
+                        <li>Developed the first-ever LaTeX package (written in LaTeX3) whose unique algorithms automate the reconstruction of missing and/or unorganized bibliography data. Its features are (Github link).</li>
+                        <li>Enhanced parsing by taking advantage of unique token identifiers and regex commands to extract bundled entry fields, significantly reducing iteration time.</li>
+                        <li>Using innovative logic, it distinguishes entry subfields for proceedings papers that are presented, published in journals, or edited in books whom all share the same BibTeX identifier (inproceedings).</li>
+                        <li>Adheres to strict APA 7th edition referencing guidelines with more styles to come.</li>
+                        <li>Published this work with focus on the algorithms’ creativity and efficiency in the journal of TUGBoat.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- UWE Bristol: Exploring computationally grounded properties -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uweSemantics">
+                    <span class="subsection-title">Exploring computationally grounded properties in formal semantics for agent reasoning</span><br>
+                    UWE Bristol, Jan 2023 – Dec 2023
+                </button>
+            </h2>
+            <div id="uweSemantics" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Analysed and compared existing semantic structures on formally modelling agents’ knowledge and reasoning process to conclude a new perspective regarding the design of said structures.</li>
+                        <li>Most research in this area agree to reach the computationally grounded threshold of semantic structures, the agents’ local states must be considered alongside the system’s global states. However, disagreement arises if a structure adequately captures the local states to reach this threshold.</li>
+                        <li>This research review presents various research with different designs for their agents’ local states and by comparison, concludes that computationally grounding is not threshold-based but gradational.</li>
+                        <li>This comparison has been shown through hypothetical scenarios (i.e., swarm of self-driving cars).</li>
+                        <li>The theoretical and practical comparison portray a new perspective towards designing semantic structures. That is: The adequate level of computational grounding for the agents’ local states must consider their environment; certain environments may require more abstract designs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- UWE Bristol: Using machine learning algorithms -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uweMachineLearning">
+                    <span class="subsection-title">Using machine learning algorithms to perform analysis and predictions on given data sets</span><br>
+                    UWE Bristol, Mar 2022 – Sep 2022
+                </button>
+            </h2>
+            <div id="uweMachineLearning" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Physical health analysis of pregnant women (anonymous).</li>
+                        <li>The objective was to preform analysis on a given data set of pregnant women’s physical health and develop predictive models for gestational diabetes risk.</li>
+                        <li>The dataset was accumulated from their regular health check-ups. The parameters included glucose levels, blood pressure, skin thickness, insulin levels, BMI, diabetes pedigree function, and age.</li>
+                        <li>Utilised Python for data processing and analysis, with libraries such as NumPy, Pandas for cleaning and classifying the data and Matplotlib, and Seaborn for visualising and predicting outcomes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- University of Kurdistan -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kurdistan">
+                    <span class="subsection-title">Development of a graph-based model for trust management in collaborative work</span><br>
+                    University of Kurdistan (MSc thesis), Jan 2019 – Jul 2020
+                </button>
+            </h2>
+            <div id="kurdistan" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Researched how trust is distributed and propagated amongst agents using agent-based modelling.</li>
+                        <li>Modelled how agents trust in their environment in NetLogo, incorporating influencing parameters.</li>
+                        <li>Applied Graph Theory, Game Theory concepts to identify agents’ most efficient collaboration form.</li>
+                        <li>Ran multiple simulations to identify the value of each influencing parameter for reaching the optimal collaboration form.</li>
+                        <li>Prepared a paper based on this research (2021), later published in SN COMPUT. SCI.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Shahid Beheshti Institute -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shahidBeheshti">
+                    <span class="subsection-title">Using eye-tracking technology for clinical studies and UX research</span><br>
+                    Shahid Beheshti Institute for Cognitive & Brain Sciences, Sep 2016 – Dec 2018
+                </button>
+            </h2>
+            <div id="shahidBeheshti" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+                <div class="accordion-body">
                     <ul>
                         <li>Conducted various experiments from researching autism to user experience using eye-tracking.</li>
                         <li>Designed the experiments on the eye-tracking software (SMI & Begaze 3.7).</li>
@@ -60,32 +182,41 @@
                         <li>Conducted user behaviour analysis on Djikala websites (akin to Amazon) using eye-tracking to study gaze patterns (fixations and saccades) of 55 participants for enhancing user navigation.</li>
                         <li>Utilised methodologies, such as user interviews, surveys, and usability testing to cross-reference with gathered data to reach meaningful results.</li>
                     </ul>
-                    <!-- Add other research experiences here -->
                 </div>
             </div>
         </div>
-        <!-- Publications -->
+    </div>
+
+    <!-- Publications -->
+    <div class="section-heading">Publications</div>
+    <div class="accordion" id="publicationsAccordion">
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#publications">
                     Publications
                 </button>
             </h2>
-            <div id="publications" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+            <div id="publications" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
                 <div class="accordion-body">
-                    <p>Tahsiri, A.M. (Forthcoming 2025). BibBreeze: A LaTeX Package for Automating Bibliography Data Reconstruction. TUGBoat 46 (1).</p>
-                    <p>Tahsiri, A.M. (2023). Development of a Graph-Based Model for Trust Management in Collaborative Work. SN COMPUT. SCI. 4 Article 635. <a href="https://doi:10.1007/s42979-023-02125-0">https://doi:10.1007/s42979-023-02125-0</a></p>
+                    <ul>
+                        <li>Tahsiri, A.M. (Forthcoming 2025). BibBreeze: A LaTeX Package for Automating Bibliography Data Reconstruction. TUGBoat 46 (1).</li>
+                        <li>Tahsiri, A.M. (2023). Development of a Graph-Based Model for Trust Management in Collaborative Work. SN COMPUT. SCI. 4 Article 635. <a href="https://doi:10.1007/s42979-023-02125-0">https://doi:10.1007/s42979-023-02125-0</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- Education -->
+    </div>
+
+    <!-- Education -->
+    <div class="section-heading">Education</div>
+    <div class="accordion" id="educationAccordion">
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#education">
                     Education
                 </button>
             </h2>
-            <div id="education" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+            <div id="education" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
                 <div class="accordion-body">
                     <p><strong>MSc Cognitive Science</strong><br>University of Kurdistan, Iran, Jan 2018 – Jul 2020</p>
                     <p><strong>BSc Computer Science</strong><br>Bojnourd University, Iran, Sep 2011 – Feb 2017</p>
@@ -93,28 +224,36 @@
                 </div>
             </div>
         </div>
-        <!-- Key Courses Taken -->
+    </div>
+
+    <!-- Key Courses Taken -->
+    <div class="section-heading">Key Courses Taken</div>
+    <div class="accordion" id="coursesAccordion">
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courses">
                     Key Courses Taken
                 </button>
             </h2>
-            <div id="courses" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+            <div id="courses" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
                 <div class="accordion-body">
                     <p><strong>Computer Science:</strong> Automata Theory, Programming for Data Science, Statistical Analysis with R, Internet of Things (IoT).</p>
                     <p><strong>Cognitive Science:</strong> Computational Cognitive Science, Cognitive Psychology (higher-cognitive functions), Cognitive Linguistics, Philosophy of Mind, Research Methods in Cognitive Science.</p>
                 </div>
             </div>
         </div>
-        <!-- Technical Skills -->
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="section-heading">Technical Skills</div>
+    <div class="accordion" id="skillsAccordion">
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skills">
                     Technical Skills
                 </button>
             </h2>
-            <div id="skills" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+            <div id="skills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
                 <div class="accordion-body">
                     <p><strong>Programming:</strong> Python (machine learning), WEX (package development), R (data analysis), Linux</p>
                     <p><strong>Software:</strong> Ubuntu, NusMV (model checker), SMI & Begaze 3.7 (eye-tracking software), Microsoft Office</p>
@@ -122,20 +261,25 @@
                 </div>
             </div>
         </div>
-        <!-- Achievements & Certifications -->
+    </div>
+
+    <!-- Achievements & Certifications -->
+    <div class="section-heading">Achievements & Certifications</div>
+    <div class="accordion" id="achievementsAccordion">
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#achievements">
                     Achievements & Certifications
                 </button>
             </h2>
-            <div id="achievements" class="accordion-collapse collapse" data-bs-parent="#cvAccordion">
+            <div id="achievements" class="accordion-collapse collapse" data-bs-parent="#achievementsAccordion">
                 <div class="accordion-body">
                     <p>Attendance in Combining EEG & Eye-tracking: Theory and practice workshop, Institute of Psychology University of Berlin and Shahid Beheshti Institute of Cognitive & Brain Sciences, Nov 2016</p>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
