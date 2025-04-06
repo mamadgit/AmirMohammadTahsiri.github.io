@@ -93,6 +93,15 @@
             color: #000;
             margin-right: 8px;
         }
+        /* Remove bullet points for Publications section */
+        #publications .first-bullet::before,
+        #publications ul li::before {
+            content: none; /* Remove both blue and white bullets */
+        }
+        #publications .first-bullet,
+        #publications ul li {
+            padding-left: 0; /* Remove padding to align with no bullets */
+        }
         .download-pdf {
             text-align: center;
             margin: 20px 0;
@@ -298,23 +307,7 @@
             <div id="publications" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
                 <div class="accordion-body">
                     <div class="first-bullet">Tahsiri, A.M. (Forthcoming 2025). BibBreeze: A LaTeX Package for Automating Bibliography Data Reconstruction. TUGBoat 46 (1).</div>
-                    <!-- Nested Accordion for White Bullet Points -->
-                    <div class="accordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button nested-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#publicationsDetailsCollapse">
-                                    More Details
-                                </button>
-                            </h2>
-                            <div id="publicationsDetailsCollapse" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <ul>
-                                        <li>Tahsiri, A.M. (2023). Development of a Graph-Based Model for Trust Management in Collaborative Work. SN COMPUT. SCI. 4 Article 635. <a href="https://doi:10.1007/s42979-023-02125-0">https://doi:10.1007/s42979-023-02125-0</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="first-bullet">Tahsiri, A.M. (2023). Development of a Graph-Based Model for Trust Management in Collaborative Work. SN COMPUT. SCI. 4 Article 635. <a href="https://doi:10.1007/s42979-023-02125-0">https://doi:10.1007/s42979-023-02125-0</a></div>
                 </div>
             </div>
         </div>
