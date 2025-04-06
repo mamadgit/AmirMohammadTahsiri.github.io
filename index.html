@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,6 +33,7 @@
             text-decoration: underline;
             margin-top: 20px;
             margin-bottom: 10px;
+            text-align: center; /* Center-align section headings */
         }
         .accordion {
             max-width: 800px;
@@ -46,14 +47,15 @@
         .accordion-button:not(.collapsed) {
             background-color: #d1e7dd;
         }
-        .subsection-title::before {
-            content: "●";
-            color: #007bff; /* Blue bullet point */
-            margin-right: 8px;
-        }
         .subsection-title {
             font-weight: bold;
             margin-bottom: 5px;
+        }
+        .date-text {
+            font-style: italic;
+            font-size: 0.9em; /* Smaller size */
+            margin-top: 0;
+            margin-bottom: 10px;
         }
         ul {
             list-style-type: none;
@@ -62,6 +64,11 @@
         ul li::before {
             content: "○"; /* White bullet point */
             color: #000;
+            margin-right: 8px;
+        }
+        ul li:first-child::before {
+            content: "●"; /* Blue bullet point for first item */
+            color: #007bff;
             margin-right: 8px;
         }
         .download-pdf {
@@ -82,18 +89,18 @@
     </div>
 
     <!-- Research Experience -->
-    <div class="section-heading">Research Experience</div>
     <div class="accordion" id="researchAccordion">
+        <div class="section-heading">Research Experience</div>
         <!-- BibBreeze -->
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bibbreeze">
-                    <span class="subsection-title">BibBreeze: A LaTeX package for Automating Bibliography Data Reconstruction</span><br>
-                    Independent Research, Jul 2024 – Dec 2024
+                    <span class="subsection-title">BibBreeze: A LaTeX package for Automating Bibliography Data Reconstruction</span>
                 </button>
             </h2>
             <div id="bibbreeze" class="accordion-collapse collapse show" data-bs-parent="#researchAccordion">
                 <div class="accordion-body">
+                    <p class="date-text">Independent Research, Jul 2024 – Dec 2024</p>
                     <ul>
                         <li>Developed the first-ever LaTeX package (written in LaTeX3) whose unique algorithms automate the reconstruction of missing and/or unorganized bibliography data. Its features are (Github link).</li>
                         <li>Enhanced parsing by taking advantage of unique token identifiers and regex commands to extract bundled entry fields, significantly reducing iteration time.</li>
@@ -108,12 +115,12 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uweSemantics">
-                    <span class="subsection-title">Exploring computationally grounded properties in formal semantics for agent reasoning</span><br>
-                    UWE Bristol, Jan 2023 – Dec 2023
+                    <span class="subsection-title">Exploring computationally grounded properties in formal semantics for agent reasoning</span>
                 </button>
             </h2>
             <div id="uweSemantics" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
                 <div class="accordion-body">
+                    <p class="date-text">UWE Bristol, Jan 2023 – Dec 2023</p>
                     <ul>
                         <li>Analysed and compared existing semantic structures on formally modelling agents’ knowledge and reasoning process to conclude a new perspective regarding the design of said structures.</li>
                         <li>Most research in this area agree to reach the computationally grounded threshold of semantic structures, the agents’ local states must be considered alongside the system’s global states. However, disagreement arises if a structure adequately captures the local states to reach this threshold.</li>
@@ -128,12 +135,12 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uweMachineLearning">
-                    <span class="subsection-title">Using machine learning algorithms to perform analysis and predictions on given data sets</span><br>
-                    UWE Bristol, Mar 2022 – Sep 2022
+                    <span class="subsection-title">Using machine learning algorithms to perform analysis and predictions on given data sets</span>
                 </button>
             </h2>
             <div id="uweMachineLearning" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
                 <div class="accordion-body">
+                    <p class="date-text">UWE Bristol, Mar 2022 – Sep 2022</p>
                     <ul>
                         <li>Physical health analysis of pregnant women (anonymous).</li>
                         <li>The objective was to preform analysis on a given data set of pregnant women’s physical health and develop predictive models for gestational diabetes risk.</li>
@@ -147,12 +154,12 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kurdistan">
-                    <span class="subsection-title">Development of a graph-based model for trust management in collaborative work</span><br>
-                    University of Kurdistan (MSc thesis), Jan 2019 – Jul 2020
+                    <span class="subsection-title">Development of a graph-based model for trust management in collaborative work</span>
                 </button>
             </h2>
             <div id="kurdistan" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
                 <div class="accordion-body">
+                    <p class="date-text">University of Kurdistan (MSc thesis), Jan 2019 – Jul 2020</p>
                     <ul>
                         <li>Researched how trust is distributed and propagated amongst agents using agent-based modelling.</li>
                         <li>Modelled how agents trust in their environment in NetLogo, incorporating influencing parameters.</li>
@@ -167,12 +174,12 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shahidBeheshti">
-                    <span class="subsection-title">Using eye-tracking technology for clinical studies and UX research</span><br>
-                    Shahid Beheshti Institute for Cognitive & Brain Sciences, Sep 2016 – Dec 2018
+                    <span class="subsection-title">Using eye-tracking technology for clinical studies and UX research</span>
                 </button>
             </h2>
             <div id="shahidBeheshti" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
                 <div class="accordion-body">
+                    <p class="date-text">Shahid Beheshti Institute for Cognitive & Brain Sciences, Sep 2016 – Dec 2018</p>
                     <ul>
                         <li>Conducted various experiments from researching autism to user experience using eye-tracking.</li>
                         <li>Designed the experiments on the eye-tracking software (SMI & Begaze 3.7).</li>
@@ -188,8 +195,8 @@
     </div>
 
     <!-- Publications -->
-    <div class="section-heading">Publications</div>
     <div class="accordion" id="publicationsAccordion">
+        <div class="section-heading">Publications</div>
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#publications">
@@ -208,8 +215,8 @@
     </div>
 
     <!-- Education -->
-    <div class="section-heading">Education</div>
     <div class="accordion" id="educationAccordion">
+        <div class="section-heading">Education</div>
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#education">
@@ -227,8 +234,8 @@
     </div>
 
     <!-- Key Courses Taken -->
-    <div class="section-heading">Key Courses Taken</div>
     <div class="accordion" id="coursesAccordion">
+        <div class="section-heading">Key Courses Taken</div>
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courses">
@@ -245,8 +252,8 @@
     </div>
 
     <!-- Technical Skills -->
-    <div class="section-heading">Technical Skills</div>
     <div class="accordion" id="skillsAccordion">
+        <div class="section-heading">Technical Skills</div>
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skills">
@@ -264,8 +271,8 @@
     </div>
 
     <!-- Achievements & Certifications -->
-    <div class="section-heading">Achievements & Certifications</div>
     <div class="accordion" id="achievementsAccordion">
+        <div class="section-heading">Achievements & Certifications</div>
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#achievements">
